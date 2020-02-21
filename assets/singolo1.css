@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.content-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+.header {
+  height:   90px ;
+ background-color: #2d303a;
+ border-bottom: 6px solid #323746;
+    color: white;
+ display: flex;
+ justify-content: space-between;
+}
+.header_logo{
+
+    padding-left:40px ;
+    padding-top: 34px;
+    font-weight: bold;
+}
+.header_logo h1 {
+    position: relative;
+    font-size: 24px;
+    line-height: 20px;
+    font-family: "Lato";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header_logo h1::after{
+    content: '*';
+    color: #f06c64;
+
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-right: 42px;
+
+
+}
+.header_nav li:not(:last-child) {
+    padding-right: 14px;
+}
+.header_nav-link {
+    list-style-type:none;
+    font-size: 11px;
+    font-family: "Lato";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header_nav li:not(:first-child)  ::before{
+    content:".";
+    margin-right: 17px;
+    color: #404455;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+A:hover{
+    color: #f06c64;
+}
+.slider{
+    background: #f06c64;
+    height: 594px;
+    border-bottom: 6px solid #ea676b;
+}
+.left-button{
+    background-image: url('./img/chev.png') ;
+    height: 26px;
+    width: 16px;
+}
+.right-button{
+    background-image: url('./img/chev.png') ;
+    height: 26px;
+    width: 16px;
+}
+.services{
+    height: 495px;
+    background: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+
+}
+.services h2{
+    font-family: "Lato";
+    font-size: 31px;
+    font-weight: 900;
+    color: #666d89;
+}
+.services_description{
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight:300 ;
+    color: #666d89 ;
+    line-height: 30px;
+    padding-top: 19px  ;
+    margin-left: 40px;
+}
+
+.services_header{
+    padding-top: 57px;
+    padding-left: 40px;
+}
+.services-text h3{
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 900;
+    color: #666d89;
+    padding-left: 20px;
+}
+.services-text p{
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 500;
+    color: #666d89;
+    line-height: 22px;
+    height: 80px;
+    padding-left: 20px;
+}
+
+.services_block{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 43px 44px 0 13px;
+
+}
+.content_block{
+    display: flex;
+    justify-content: space-between;
+}
+.icon.pen{
+    background-image: url("./img/pen.png");
+    width: 60px;
+    height: 60px;
+}
+.icon.light_bulb{
+    background-image: url("./img/lightbulb.png");
+    width: 60px;
+    height: 60px;
+}
+.icon.heart{
+    background-image: url("./img/heart.png");
+    width: 60px;
+    height: 60px;
+}
+.icon.phone {
+    background-image: url("./img/phone.png");
+    width: 60px;
+    height: 60px;
+}
+.icon.support{
+    background-image: url("./img/bubble.png");
+    width: 60px;
+    height: 60px;
+}
+.icon.star{
+    background-image: url("./img/star.png");
+    width: 60px;
+    height: 60px;
+}
+.icon{
+
+}
