@@ -77,11 +77,6 @@ a{
 a.active {
     color: #f06c64;
 }
-A:hover{
-    color: #f06c64;
-}
-
-
 
 
 
@@ -374,9 +369,13 @@ A:hover{
     margin: 0 9px 19px 1px;
     padding: 2px 6px 4px 6px;
     color:#767e9e;
+    outline: none;
 }
-.button_portfolio:hover{
+#portfolio_button button{
     cursor:pointer;
+}
+.button_portfolio.active{
+
     color: white;
     border: 1px solid white;
 }
@@ -574,9 +573,7 @@ input{
     color: #f48c8f;
 
 }
-input:invalid {
-    background-color: #ffdddd;
-}
+
 
 textarea{
     height: 202px;

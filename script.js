@@ -1,19 +1,14 @@
-const menu=document.getElementById('menu');
-menu.addEventListener('click',(event)=>{
-    menu.querySelectorAll('a').forEach(el=>el.classList.remove('active'));
-    event.target.classList.add('active');
-});
 const portfolio=document.getElementById('content_icon');
 
 document.addEventListener("scroll", onscroll);
 
 function onscroll(){
    const curPos=window.scrollY;
-   const positionID=document.querySelectorAll('#content-wrapper>section,#content-wrapper>header').offsetHeight;
+   const positionID=document.querySelectorAll('#content-wrapper>section,#content-wrapper>header');
    const links=document.querySelectorAll('#menu a');
 
     positionID.forEach((el)=>{
-        if(el.offsetTop <= curPos &&(el.offsetTop+el.offsetHeight)>curPos){
+        if(el.offsetTop-90 <= curPos &&(el.offsetTop+el.offsetHeight-90)>curPos){
             links.forEach((a) =>{
                 a.classList.remove('active');
                 if(el.getAttribute('id')===a.getAttribute('href').substring(1)){
@@ -63,6 +58,13 @@ function toggleSlides() {
 
 // Portfolio
 const portfolioButtons=document.getElementById('portfolio_button').children;
+const portfolioButtonsActive=document.getElementById('portfolio_button');
+portfolioButtonsActive.addEventListener('click',(event)=>{
+    portfolioButtonsActive.querySelectorAll('button').forEach(el=>el.classList.remove('active'));
+    event.target.classList.add('active');
+});
+
+
 for (let i = 0; i < portfolioButtons.length; i++) {
     portfolioButtons[i].addEventListener('click', handleClickPortfolioBtn);
 }
@@ -74,11 +76,9 @@ itemsContainer.querySelectorAll('div').forEach((element) => {
 });
 
 function reBuildArray() {
-    const newArray = [];
-    for (let i = arrIcon.length - 1; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1));
-        newArray.push(arrIcon[randomIndex])
-    }
+ let newArray = arrIcon.sort(function(){
+        return Math.random() - 0.5;
+    });
     return newArray
 }
 
@@ -166,8 +166,13 @@ document.querySelector('.right-button').addEventListener('click', function() {
         nextItem(currentSlide);
     }
 });
+let HandleDescription = document.querySelector("#describe");
 
-
+HandleDescription.onkeyup  = function(event) {
+    if (event.target.value.length > 500) {
+        event.target.value = event.target.value.substring(0, 500);
+    }
+}
 
 
 
