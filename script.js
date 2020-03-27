@@ -8,7 +8,7 @@ function onscroll(){
    const links=document.querySelectorAll('#menu a');
 
     positionID.forEach((el)=>{
-        if(el.offsetTop-90 <= curPos &&(el.offsetTop+el.offsetHeight-90)>curPos){
+        if(el.offsetTop-90 <= curPos &&(el.offsetTop + el.offsetHeight-90)>curPos){
             links.forEach((a) =>{
                 a.classList.remove('active');
                 if(el.getAttribute('id')===a.getAttribute('href').substring(1)){
@@ -172,7 +172,7 @@ HandleDescription.onkeyup  = function(event) {
     if (event.target.value.length > 500) {
         event.target.value = event.target.value.substring(0, 500);
     }
-}
+};
 
 
 
