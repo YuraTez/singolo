@@ -5,7 +5,7 @@ document.addEventListener("scroll", onscroll);
 function onscroll(){
    const curPos=window.scrollY;
    const positionID=document.querySelectorAll('#content-wrapper>section,#content-wrapper>header');
-   const links=document.querySelectorAll('#menu a');
+   const links = document.querySelectorAll('#menu a');
 
     positionID.forEach((el)=>{
         if(el.offsetTop-90 <= curPos &&(el.offsetTop + el.offsetHeight-90)>curPos){
@@ -173,13 +173,26 @@ HandleDescription.onkeyup  = function(event) {
         event.target.value = event.target.value.substring(0, 500);
     }
 };
+const HandleHamburger = document.getElementById("hamburger");
+const HandleMenu = document.getElementById("menu");
+const HandleScreen = document.getElementById("screen");
+const HandleLogo = document.getElementById("logo");
+HandleHamburger.onclick = function() {
+    HandleHamburger.classList.toggle('activeHamburger');
+    HandleMenu.classList.toggle('activeHamburger');
+    HandleScreen.classList.toggle('activeHamburger');
+    HandleLogo.classList.toggle('activeHamburger');
 
-
-
-
-
-
-
-
-
-
+};
+HandleMenu.onclick = function() {
+    HandleMenu.classList.remove('activeHamburger');
+    HandleHamburger.classList.remove('activeHamburger');
+    HandleScreen.classList.remove('activeHamburger');
+    HandleLogo.classList.remove('activeHamburger');
+};
+HandleScreen.onclick = function() {
+    HandleMenu.classList.remove('activeHamburger');
+    HandleHamburger.classList.remove('activeHamburger');
+    HandleScreen.classList.remove('activeHamburger');
+    HandleLogo.classList.remove('activeHamburger');
+};

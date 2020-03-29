@@ -3,6 +3,18 @@
     padding: 0;
     scroll-behavior: smooth;
 }
+.blackout_screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000a6;
+    z-index: 3;
+    display: none;
+}
 .content-wrapper {
     max-width: 1020px;
     margin: 0 auto;
@@ -79,9 +91,6 @@ a{
 a.active {
     color: #f06c64;
 }
-
-
-
 /* SLIDER START*/
 .slider_block{
     width: 100%;
@@ -935,7 +944,7 @@ footer{
         height: 100%;
      }
      .portfolio_content{
-         margin-left: 40px;
+         width: calc(100% - 40px);
      }
      .button_block{
          width: calc(100% - 77px);
@@ -1022,9 +1031,6 @@ footer{
     .slider, .slide {
         height: 218px;
     }
-
-
-
     .iphone-left {
         width: 88px;
         height: 177px;
@@ -1032,17 +1038,17 @@ footer{
         margin: 14px 0 0 53px;
     }
     #btn_phone_left{
-        width: 30px;
-        height: 30px;
-        margin: 360px 0 0 176px;
+        width: 15px;
+        height: 15px;
+        margin: 164px 0 0 84px;
     }
     .displayPhone_left{
-        width: 142px;
-        height: 251px;
-        margin: 48px 0 0 10px;
+        width: 71px;
+        height: 123px;
+        margin: 23px 0 0 4px;
     }
     .left-button{
-        left: 9px;
+        left: 13px;
     }
     .iphone-right {
         width: 177px;
@@ -1051,19 +1057,18 @@ footer{
         margin: 61px 0 0 165px;
     }
     #btn_phone_right{
-        width: 30px;
-        height: 30px;
-        margin: 196px 0 0 330px;
+        width: 15px;
+        height: 15px;
+        margin: 93px 0 0 168px;
     }
     .displayPhone_right{
-        width: 251px;
-        height: 142px;
-        margin: 140px 0 0 368px;
+        width:123px;
+        height: 71px;
+        margin: 66px 0 0 186px;
     }
     .right-button{
         right: 9px;
     }
-
      .services{
         padding-bottom: 20px;
       }
@@ -1071,7 +1076,6 @@ footer{
         margin: 0 40px;
         display: flex;
         flex-direction: column;
-        width: 100%;
     }
     .services_description{
         letter-spacing: -0.012em;
@@ -1095,7 +1099,6 @@ footer{
     }
     .icon_block {
         width: 47%;
-
     }
     .portfolio_icon_block img {
         width: 100%;
@@ -1143,5 +1146,180 @@ footer{
     .Social_Media{
         margin: auto;
         margin-top: 21px;
+    }
+    #message{
+        top: 58%;
+        left: 20%;
+        width: 233px;
+        height: 168px;
+        font-size: 12px;
+        line-height: 33px;
+        border-radius: 61px;
+    }
+    #message p{
+        margin-top: auto;
+    }
+    #close_btn{
+        width: 90px;
+        height: 33px;
+        margin-top: 11px;
+    }
+    .header_nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #2d303a;
+        margin: auto;
+        width: 278px;
+        height: 100%;
+        padding-right: 0;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s;
+        z-index: 6;
+    }
+    .header_nav.activeHamburger {
+        left: calc((100% - 375px) / 2);
+        transition: all 0.3s;
+        z-index: 6;
+    }
+    .header_nav-link{
+        line-height: 29px;
+        font-size: 24px;
+        font-family: "Lato";
+        margin: 0 0 27px 71px;
+    }
+    .header_nav li:not(:first-child) ::before{
+        content:"";
+        position: absolute;
+        color: #404455;
+        margin: 0;
+    }
+    .hamburger{
+        display: block;
+        position: fixed;
+        margin: 0 0 0 20px;
+        z-index: 10;
+        transition: all 0.3s;
+    }
+    .hamburger.activeHamburger{
+        transform: rotate(90deg);
+        transition: all 0.3s;
+    }
+    .header_logo{
+        margin: auto;
+    }
+    .header,
+    .header_container{
+        height: 71px;
+    }
+    #header,
+    #portfolio,
+    #about_us,
+    #get_quote,
+    #services {
+        scroll-margin-top:71px;
+    }
+    .blackout_screen.activeHamburger{
+        display: block;
+    }
+    .header_logo.activeHamburger{
+        margin-left: 92px;
+        z-index: 8;
+    }
+}
+@media (max-width: 374px) {
+    .header_container, .content-wrapper {
+        max-width: 320px;
+    }
+    .slider, .slide {
+        height: 205px;
+    }
+    .iphone-left {
+        width: 88px;
+        height: 156px;
+        margin: 22px 0 0 41px;
+    }
+    .iphone-right {
+        width: 156px;
+        height: 88px;
+        background-size: contain;
+        margin: 64px 0 0 135px;
+    }
+    .displayPhone_left {
+        width: 62px;
+        height: 108px;
+        margin: 21px 0 0 4px;
+    }
+    .displayPhone_right {
+        width: 108px;
+        height: 61px;
+        margin: 68px 0 0 154px;
+    }
+    #btn_phone_left {
+        margin: 153px 0 0 69px;
+    }
+    #btn_phone_right {
+        width: 15px;
+        height: 15px;
+        margin: 92px 0 0 137px;
+    }
+    .services_header{
+        padding-left:20px;
+    }
+    .services_description{
+        margin: 0 20px;
+    }
+    .services_block {
+        margin: 0 20px;
+    }.services-text {
+         padding-left: 8px;
+     }
+     .portfolio_header {
+         margin: 24px 0 0 20px;
+     }
+    .portfolio_description {
+        margin: 27px 20px 0 20px;
+    }
+    .portfolio_btn_wrapper {
+        margin: 10px 0 0 13px;
+    }
+    .portfolio_icon_block {
+        width: calc(100% - 33px);
+    }
+    .icon_block {
+        width: 48%;
+        margin-bottom: 11px;
+    }
+    .about_us_header {
+        margin: 0px 20px;
+    }
+    .about_us_description {
+        margin: 14px 20px 0;
+    }
+    .about_us_contact {
+        margin-left: 20px;
+    }
+    .icon_desmond_miles,
+    .icon_Adam_Jensen,
+    .icon_scolara_visari {
+        width: 280px;
+    }
+    .get_heading {
+        margin: 0 20px;
+    }
+    .get_description {
+        margin: 28px 20px 0 20px;
+    }
+    .contact_form {
+        margin: 0 20px 42px;
+    }
+    .button:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    #message {
+        left: 14%;
     }
 }
