@@ -169,8 +169,15 @@ document.querySelector('.right-button').addEventListener('click', function() {
 let HandleDescription = document.querySelector("#describe");
 
 HandleDescription.onkeyup  = function(event) {
-    if (event.target.value.length > 500) {
-        event.target.value = event.target.value.substring(0, 500);
+    if (event.target.value.length > 400) {
+        event.target.value = event.target.value.substring(0, 400);
+    }
+};
+let HandleSubject = document.querySelector("#subject");
+
+HandleSubject.onkeyup  = function(event) {
+    if (event.target.value.length >10) {
+        event.target.value = event.target.value.substring(0,10);
     }
 };
 const HandleHamburger = document.getElementById("hamburger");

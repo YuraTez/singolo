@@ -42,10 +42,10 @@
 
 }
 .header_logo{
-
     display: flex;
     font-weight: bold;
     margin-left: 41px;
+    color: white;
 }
 .header_logo h1 {
     position: relative;
@@ -1226,6 +1226,11 @@ footer{
     .header_logo.activeHamburger{
         margin-left: 92px;
         z-index: 8;
+    }
+    .button:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }
 @media (max-width: 374px) {
